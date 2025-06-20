@@ -45,7 +45,14 @@ const Index = () => {
           <div className="flex items-center space-x-6">
             <a href="#services" className="hover:text-pink-400 transition-colors">Services</a>
             <a href="#packages" className="hover:text-pink-400 transition-colors">Packages</a>
-            <a href="#portfolio" className="hover:text-pink-400 transition-colors">Portfolio</a>
+            <a 
+              href="https://www.notion.so/MAD-APES-AGENCY-1fccce3618dc8049bc23db09144ca3e4?source=copy_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-pink-400 transition-colors"
+            >
+              Portfolio
+            </a>
             <a href="https://wa.me/919476383024" className="hover:text-pink-400 transition-colors">Contact</a>
             <Button 
               asChild 
@@ -67,49 +74,6 @@ const Index = () => {
 
       {/* Packages Section */}
       <Packages />
-
-      {/* Client Portfolio */}
-      <section id="portfolio" className="py-20 relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent">
-              Our Portfolio
-            </h2>
-            <p className="text-gray-400 text-lg">
-              Discover our work and see what we can create for you
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Trusted by Leading Brands</h3>
-              <ClientCarousel />
-            </div>
-            
-            <Card className="bg-gray-800/50 backdrop-blur-lg border-gray-700 hover:bg-gray-800/70 transition-all duration-300">
-              <CardContent className="p-8">
-                <h4 className="text-xl font-semibold mb-4 text-pink-400">Complete Portfolio</h4>
-                <p className="text-gray-300 mb-6">
-                  Explore our comprehensive portfolio showcasing successful projects across various industries.
-                </p>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  className="border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white"
-                >
-                  <a 
-                    href="https://www.notion.so/MAD-APES-AGENCY-1fccce3618dc8049bc23db09144ca3e4?source=copy_link" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    View Full Portfolio
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 relative">
