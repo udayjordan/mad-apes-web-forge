@@ -83,7 +83,7 @@ const Packages = () => {
               }`}
             >
               {pkg.popular && (
-                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-red-500 text-black font-semibold px-4 py-1">
+                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-red-500 text-gray-900 font-semibold px-4 py-1">
                   Most Popular
                 </Badge>
               )}
@@ -115,7 +115,7 @@ const Packages = () => {
                 <Button 
                   className={`w-full ${
                     pkg.popular 
-                      ? 'bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-black font-semibold' 
+                      ? 'bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-gray-900 font-semibold' 
                       : 'bg-gray-700 hover:bg-gray-600 text-gray-200'
                   } transition-all duration-300 hover:scale-105`}
                   asChild
@@ -135,7 +135,7 @@ const Packages = () => {
           </p>
           <Button 
             variant="outline" 
-            className="border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-black"
+            className="border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-gray-900 bg-transparent"
             asChild
           >
             <a href="https://wa.me/919476383024" target="_blank" rel="noopener noreferrer">

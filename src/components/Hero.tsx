@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in delay-500">
             <Button 
               size="lg"
-              className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-black font-semibold text-lg px-8 py-4 rounded-full shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-gray-900 font-semibold text-lg px-8 py-4 rounded-full shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 hover:scale-105"
               asChild
             >
               <a href="https://calendly.com/madapes-co/30min" target="_blank" rel="noopener noreferrer">
@@ -39,7 +39,7 @@ const Hero = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-black text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
+              className="border-2 border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-gray-900 bg-transparent text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
               asChild
             >
               <a href="#packages">
