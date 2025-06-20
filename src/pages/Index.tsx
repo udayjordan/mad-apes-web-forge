@@ -56,7 +56,7 @@ const Index = () => {
             <a href="https://wa.me/919476383024" className="hover:text-pink-400 transition-colors">Contact</a>
             <Button 
               asChild 
-              className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600"
+              className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-black font-semibold"
             >
               <a href="https://calendly.com/madapes-co/30min" target="_blank" rel="noopener noreferrer">
                 Book a Call
@@ -91,13 +91,13 @@ const Index = () => {
             <Card className="bg-gray-800/50 backdrop-blur-lg border-gray-700 hover:bg-gray-800/70 transition-all duration-300 group">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Phone className="w-8 h-8 text-white" />
+                  <Phone className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">WhatsApp Chat</h3>
                 <p className="text-gray-400 mb-4">Quick response guaranteed</p>
                 <Button 
                   asChild 
-                  className="bg-green-600 hover:bg-green-700"
+                  className="bg-green-600 hover:bg-green-700 text-gray-900 font-semibold"
                 >
                   <a href="https://wa.me/919476383024" target="_blank" rel="noopener noreferrer">
                     Chat Now
@@ -109,14 +109,14 @@ const Index = () => {
             <Card className="bg-gray-800/50 backdrop-blur-lg border-gray-700 hover:bg-gray-800/70 transition-all duration-300 group">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Mail className="w-8 h-8 text-white" />
+                  <Mail className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Email Us</h3>
                 <p className="text-gray-400 mb-4">Detailed project discussions</p>
                 <Button 
                   asChild 
                   variant="outline" 
-                  className="border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white"
+                  className="border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-black"
                 >
                   <a href="mailto:madapes.co@gmail.com">
                     Send Email
@@ -128,13 +128,13 @@ const Index = () => {
             <Card className="bg-gray-800/50 backdrop-blur-lg border-gray-700 hover:bg-gray-800/70 transition-all duration-300 group">
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <Linkedin className="w-8 h-8 text-white" />
+                  <Linkedin className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">LinkedIn</h3>
                 <p className="text-gray-400 mb-4">Professional networking</p>
                 <Button 
                   asChild 
-                  className="bg-blue-600 hover:bg-blue-700"
+                  className="bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold"
                 >
                   <a href="https://www.linkedin.com/in/uday-shikhar-das-b49b851a9/" target="_blank" rel="noopener noreferrer">
                     Connect
@@ -156,7 +156,7 @@ const Index = () => {
           className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 shadow-lg"
           size="icon"
         >
-          <ArrowUp className="w-6 h-6" />
+          <ArrowUp className="w-6 h-6 text-black" />
         </Button>
       )}
     </div>

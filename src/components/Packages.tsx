@@ -83,13 +83,13 @@ const Packages = () => {
               }`}
             >
               {pkg.popular && (
-                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-red-500 text-white px-4 py-1">
+                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-red-500 text-black font-semibold px-4 py-1">
                   Most Popular
                 </Badge>
               )}
               
               <CardHeader className="text-center pb-2">
-                <CardTitle className="text-2xl font-bold text-white mb-2">
+                <CardTitle className="text-2xl font-bold text-gray-200 mb-2">
                   {pkg.name}
                 </CardTitle>
                 <div className={`text-4xl font-bold bg-gradient-to-r ${pkg.gradient} bg-clip-text text-transparent mb-2`}>
@@ -115,8 +115,8 @@ const Packages = () => {
                 <Button 
                   className={`w-full ${
                     pkg.popular 
-                      ? 'bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600' 
-                      : 'bg-gray-700 hover:bg-gray-600'
+                      ? 'bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-black font-semibold' 
+                      : 'bg-gray-700 hover:bg-gray-600 text-gray-200'
                   } transition-all duration-300 hover:scale-105`}
                   asChild
                 >
@@ -135,7 +135,7 @@ const Packages = () => {
           </p>
           <Button 
             variant="outline" 
-            className="border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white"
+            className="border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-black"
             asChild
           >
             <a href="https://wa.me/919476383024" target="_blank" rel="noopener noreferrer">
