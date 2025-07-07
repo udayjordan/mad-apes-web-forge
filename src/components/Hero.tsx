@@ -1,10 +1,12 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowUp } from 'lucide-react';
+import { AnimatedCounter } from './AnimatedCounter';
+
+
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-32">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-pink-900/20 via-transparent to-transparent" />
@@ -49,26 +51,27 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in delay-700">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 mb-12">
             <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">50+</div>
+              <div className="text-4xl font-bold text-pink-400 mb-2">
+                <AnimatedCounter value={50} duration={2000} suffix="+" />
+              </div>
               <div className="text-gray-400">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">100%</div>
+              <div className="text-4xl font-bold text-pink-400 mb-2">
+                <AnimatedCounter value={100} duration={2000} suffix="%" />
+              </div>
               <div className="text-gray-400">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+              <div className="text-4xl font-bold text-pink-400 mb-2">
+                24/7
+              </div>
               <div className="text-gray-400">Support Available</div>
             </div>
           </div>
         </div>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowUp className="w-6 h-6 text-pink-400 rotate-180" />
       </div>
     </section>
   );

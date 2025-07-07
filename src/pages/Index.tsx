@@ -1,77 +1,52 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowUp, Check, Mail, Phone, Linkedin, Instagram, Youtube } from 'lucide-react';
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
-import Packages from '@/components/Packages';
+import ConsultationBanner from '@/components/ConsultationBanner';
+// import BrandShootCarousel from '@/components/BrandShootCarousel';
+import DigitalMarketingBanner from '@/components/DigitalMarketingBanner';
 import ClientCarousel from '@/components/ClientCarousel';
 import Footer from '@/components/Footer';
+import Packages from '@/components/Packages';
 
 const Index = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setShowBackToTop(true);
-    } else {
-      setShowBackToTop(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+    };
 
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [showBackToTop]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-gray-900 text-white overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/3f216b3a-574a-4027-94ec-a29bc88ff1f1.png" 
-              alt="Mad Apes Logo" 
-              className="w-10 h-10"
-            />
-            <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent">
-              MAD APES
-            </span>
-          </div>
-          <div className="flex items-center space-x-6">
-            <a href="#services" className="hover:text-pink-400 transition-colors">Services</a>
-            <a href="#packages" className="hover:text-pink-400 transition-colors">Packages</a>
-            <a 
-              href="https://www.notion.so/MAD-APES-AGENCY-1fccce3618dc8049bc23db09144ca3e4?source=copy_link" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-pink-400 transition-colors"
-            >
-              Portfolio
-            </a>
-            <a href="https://wa.me/919476383024" className="hover:text-pink-400 transition-colors">Contact</a>
-            <Button 
-              asChild 
-              className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-gray-900 font-semibold"
-            >
-              <a href="https://calendly.com/madapes-co/30min" target="_blank" rel="noopener noreferrer">
-                Book a Call
-              </a>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <Hero />
 
       {/* Services Section */}
       <Services />
-
+      
+      {/* Consultation Banner */}
+      <ConsultationBanner />
+      
+      {/* Brand Shoot Section */}
+      {/* <BrandShootCarousel /> */}
+      <DigitalMarketingBanner />
       {/* Packages Section */}
       <Packages />
 
@@ -97,7 +72,8 @@ const Index = () => {
                 <p className="text-gray-400 mb-4">Quick response guaranteed</p>
                 <Button 
                   asChild 
-                  className="bg-green-600 hover:bg-green-700 text-gray-100 font-semibold"
+                  variant="outline" 
+                  className="border-pink-500 text-pink-400 hover:bg-green-500 hover:text-gray-900 hover:border-green-500 bg-transparent"
                 >
                   <a href="https://wa.me/919476383024" target="_blank" rel="noopener noreferrer">
                     Chat Now
@@ -134,7 +110,8 @@ const Index = () => {
                 <p className="text-gray-400 mb-4">Professional networking</p>
                 <Button 
                   asChild 
-                  className="bg-blue-600 hover:bg-blue-700 text-gray-100 font-semibold"
+                  variant="outline" 
+                  className="border-pink-500 text-pink-400 hover:bg-blue-500 hover:text-gray-900 hover:border-blue-500 bg-transparent"
                 >
                   <a href="https://www.linkedin.com/in/uday-shikhar-das-b49b851a9/" target="_blank" rel="noopener noreferrer">
                     Connect
@@ -151,13 +128,13 @@ const Index = () => {
 
       {/* Back to Top Button */}
       {showBackToTop && (
-        <Button
+        <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 shadow-lg"
-          size="icon"
+          className="fixed bottom-6 right-4 sm:right-6 md:right-8 bg-pink-500 text-white p-2.5 sm:p-3 rounded-full shadow-lg hover:bg-pink-600 transition-colors z-40"
+          aria-label="Back to top"
         >
-          <ArrowUp className="w-6 h-6 text-gray-900" />
-        </Button>
+          <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
+        </button>
       )}
     </div>
   );

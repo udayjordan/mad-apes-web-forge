@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Check } from 'lucide-react';
+import ImageCarousel from './ImageCarousel';
 
 const Packages = () => {
   const packages = [
@@ -63,8 +64,9 @@ const Packages = () => {
   ];
 
   return (
-    <section id="packages" className="py-20 relative">
+    <section id="packages" className="relative py-20">
       <div className="container mx-auto px-6">
+        
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent">
             Choose Your Package
@@ -74,14 +76,27 @@ const Packages = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {packages.map((pkg, index) => (
-            <Card 
-              key={index} 
-              className={`relative bg-gray-800/50 backdrop-blur-lg border-gray-700 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                pkg.popular ? 'border-pink-500 shadow-pink-500/20' : ''
-              }`}
-            >
+        <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-8">
+          {packages.map((pkg, index) => {
+            const isPopular = pkg.popular;
+            return (
+              <div 
+                key={index}
+                className={`relative h-full transition-all duration-300 ${
+                  isPopular ? 'md:mt-0' : 'md:mt-6 md:hover:mt-4'
+                }`}
+              >
+                <div className={`h-full ${
+                  isPopular 
+                    ? 'md:scale-110 md:z-10 md:shadow-2xl md:shadow-pink-500/30' 
+                    : 'md:scale-95 hover:scale-100 md:transition-transform md:duration-300 opacity-90 hover:opacity-100'
+                }`}>
+                  {/* Scale down non-popular cards to 95% and reduce opacity slightly */}
+                  <Card 
+                    className={`h-full bg-gray-800/50 backdrop-blur-lg border-gray-700 hover:bg-gray-800/70 transition-colors duration-300 ${
+                      isPopular ? 'border-pink-500 shadow-pink-500/20' : ''
+                    }`}
+                  >
               {pkg.popular && (
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-red-500 text-gray-900 font-semibold px-4 py-1">
                   Most Popular
@@ -125,8 +140,11 @@ const Packages = () => {
                   </a>
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+                  </Card>
+                </div>
+              </div>
+            );
+          })}
         </div>
         
         <div className="text-center mt-12">

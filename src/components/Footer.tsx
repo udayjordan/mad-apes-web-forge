@@ -85,7 +85,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Mad Apes Agency. All rights reserved. Built with passion for digital excellence.
+            © 2025 Mad Apes Agency. All rights reserved. Built with passion for digital excellence.
           </p>
         </div>
       </div>
