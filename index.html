@@ -8,6 +8,21 @@
     <meta name="description" content="Mad Apes Agency provides premium digital services including website development, mobile apps, SEO marketing, Meta ads, influencer collaboration, and branding. Transform your business with our comprehensive packages starting from ₹40,000." />
     <meta name="keywords" content="digital agency, web development, mobile apps, SEO marketing, Meta ads, Instagram marketing, branding, Mad Apes Agency" />
     <meta name="author" content="Mad Apes Agency" />
+    <link rel="canonical" href="https://madapes.lovable.app/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Mad Apes" />
+    <meta name="application-name" content="Mad Apes" />
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/lovable-uploads/3f216b3a-574a-4027-94ec-a29bc88ff1f1.png" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Preconnect to important origins -->
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -56,5 +71,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

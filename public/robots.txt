@@ -1,13 +1,30 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://madapes.lovable.app/sitemap.xml
+
+# Crawl-delay: 10
+
+# Googlebot specific rules
 User-agent: Googlebot
 Allow: /
+Disallow: /api/
 
+# Bingbot specific rules
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 10
 
+# Social Media Bots
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
+Allow: /
 Allow: /
 
 User-agent: *
