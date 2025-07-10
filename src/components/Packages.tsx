@@ -14,7 +14,7 @@ const Packages = () => {
       features: [
         "Complete Website OR Mobile App (Android/iOS)",
         "E-commerce or Shopify Integration",
-        "Free Hosting for 1 Year",
+        "Free Hosting for 1 month",
         "Basic SEO Optimization",
         "Responsive Design",
         "SSL Certificate",
@@ -30,7 +30,7 @@ const Packages = () => {
       description: "Ideal for businesses ready to scale",
       features: [
         "Everything in Starter Package",
-        "200 Instagram Posts + 10 Reels",
+        "20 Instagram Posts + 3 Reels",
         "Meta Marketing Campaign Setup",
         "Advanced SEO Optimization",
         "Social Media Strategy",
